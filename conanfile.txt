@@ -1,0 +1,5 @@
+[requires]
+RPC/master@enhex/stable
+
+[generators]
+premake
