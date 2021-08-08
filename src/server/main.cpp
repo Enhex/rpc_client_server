@@ -25,5 +25,7 @@ int main()
 
 	auto threads = hla::thread_pool_run(context);
 
+	std::cout << "port " << rpc_port << std::endl;
+
 	hla::join_threads(threads);
 }

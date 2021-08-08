@@ -3,6 +3,7 @@
 #include <hla/object.h>
 #include <hla/utility.h>
 #include <thread>
+#include <iostream>
 
 int main(int argc, char *argv[])
 {
@@ -16,6 +17,8 @@ int main(int argc, char *argv[])
 
 	asio::io_context context;
 	auto threads = hla::thread_pool_run(context);
+
+	std::cout << "port " << rpc_port << std::endl;
 
 	// call RPC via TCP
 	tcp::socket rpc_client(context);
